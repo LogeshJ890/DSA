@@ -1,0 +1,40 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Student{
+    int roll;
+    char name[50];
+};
+
+int main() {
+    struct Student *ptr;
+    
+    ptr = (struct Student *)malloc(sizeof(struct Student));
+    
+    if(ptr == NULL){
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+    
+    printf("Enter Roll No :");
+    scanf("%d",&ptr->roll);
+    printf("Enter Name: ");
+    scanf("%s",&ptr->name);
+    
+    printf("\nStudents Record:\n");
+
+    printf("Roll: %d\nName: %s\n", ptr->roll ,ptr->name);
+
+    free(ptr);
+    return 0;
+}
+/* ----OUTPUT----
+Enter Roll No :78
+Enter Name: logesh
+
+Students Record:
+Roll: 78
+Name: logesh
+
+*/
