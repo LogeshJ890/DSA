@@ -1,0 +1,28 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+struct Student{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1 = {101,"Ravi", 85.5};
+    struct Student *ptr;
+    
+    ptr = &s1;
+    
+    printf("Using Pointer to Access Structure:\n");
+    printf("Roll:%d\n",ptr->roll);
+    printf("Name: %s\n",ptr->name);
+    printf("Marks: %.2f\n",ptr->marks);
+    return 0;
+}
+
+/* ----OUTPUT----
+Using Pointer to Access Structure:
+Roll:101
+Name: Ravi
+Marks: 85.50
+*/
