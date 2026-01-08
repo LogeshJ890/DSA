@@ -4,7 +4,7 @@ using namespace std;
 int main() {
    int arr[100];
    int n;
-   int ele,pos,temp;
+   int ele,pos;
    
    printf("Enter the no of elements:");
    scanf("%d",&n);
